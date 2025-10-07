@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Commuter Sans";
+  src: url("/fonts/CommuterSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --glass-bg: rgba(255,255,255,0.06);
+  --glass-brd: rgba(255,255,255,0.15);
+}
+html, body, #root { height: 100%; }
+body { margin: 0; background: #0b0b0b; color: #fff; font-family: "Commuter Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+* { box-sizing: border-box; }
+.panel {
+  backdrop-filter: blur(8px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-brd);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.btn:hover { border-color: rgba(255,255,255,0.45); }
+.controls { display: grid; gap: 10px; }
+.label { font-size: 12px; opacity: .7; width: 110px; }
+.row { display: flex; gap: 12px; align-items: center; }
+small { opacity: .6; }
+a { color: inherit; }
+.container { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.grid { width: 100%; max-width: 1100px; display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+.aspect { position: relative; width: 100%; padding-top: 133%; border-radius: 16px; overflow: hidden; }
+.aspect > * { position: absolute; inset: 0; width: 100%; height: 100%; }
+.brand { position: absolute; top: 12px; left: 12px; font-size: 11px; letter-spacing: .2em; opacity: .7; text-transform: uppercase; }
+.slider { width: 100%; }
+.bg-aeterna { background: #121212; }
+.bg-aeonic { background: #EDEAE5; color: #000; }
+.bg-aermor { background: #E8EDF2; color: #000; }
+.voice { text-align: center; display: grid; gap: 12px; padding: 24px; }
+.voice h1 { margin: 8px 0; font-weight: 600; letter-spacing: .02em; }
